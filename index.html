@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cup Sudoku</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <h1>Cup Sudoku</h1>
+
+  <div id="app">
+
+    <!-- Screen 1: Player selection -->
+    <section id="screen-player" class="screen active">
+      <h2>Who are you?</h2>
+      <button data-player="X">I am X</button>
+      <button data-player="Y">I am Y</button>
+    </section>
+
+    <!-- Screen 2: Board size -->
+    <section id="screen-size" class="screen">
+      <h2>Choose board size</h2>
+      <button data-size="6">6 × 6</button>
+      <button data-size="9">9 × 9</button>
+    </section>
+
+    <!-- Screen 3: Mode -->
+    <section id="screen-mode" class="screen">
+      <h2>Choose mode</h2>
+      <button data-mode="solo">Play alone</button>
+      <button data-mode="partner">Ping your partner</button>
+    </section>
+
+    <!-- Screen 4: Game -->
+    <section id="screen-game" class="screen">
+      <div class="game-header">
+        <span id="game-info"></span>
+        <span id="timer">00:00</span>
+      </div>
+
+      <div id="board">
+        <!-- Sudoku grid will render here -->
+      </div>
+
+      <div class="game-actions">
+        <button id="stop-game">Stop game</button>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- History -->
+  <section id="history">
+    <h2>Game history</h2>
+    <ul id="history-list"></ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
